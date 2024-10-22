@@ -18,7 +18,9 @@ return(
 <div>
 <PokemonCard pokemon ={pokemonList[pokemonIndex]}/>
 <div>
- {pokemonIndex > 0  ?  (<button onClick={prevPokemon}>Précédent</button>)  : ""  }
+
+{pokemonIndex > 0  ?  (<button onClick={prevPokemon}>Précédent</button>)  : ""  }
+
 {pokemonIndex < pokemonList.length - 1 ? (<button onClick={nextPokemon}>Suivant</button>) : ""}
 
 </div>
