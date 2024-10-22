@@ -25,4 +25,5 @@ const pokemonList = [
     name: "Mew",
   },
 ];
+
 export default App;
