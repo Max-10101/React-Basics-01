@@ -2,26 +2,23 @@
 import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 
 
 
 function App() {
+  
   const [pokemonIndex, setPokemonIndex]= useState(0)
-  const nextPokemon = () => {
-    setPokemonIndex(pokemonIndex + 1 );
-  };
-  const prevPokemon = () => {
-    setPokemonIndex( pokemonIndex - 1  );
-  };
+  
 return(
  
 <div>
 <PokemonCard pokemon ={pokemonList[pokemonIndex]}/>
 <div>
 
-{pokemonIndex > 0  ?  (<button onClick={prevPokemon}>Précédent</button>)  : ""  }
-
-{pokemonIndex < pokemonList.length - 1 ? (<button onClick={nextPokemon}>Suivant</button>) : ""}
+<NavBar  pokemonIndex={pokemonIndex}
+         setPokemonIndex={setPokemonIndex}
+         pokemonList={pokemonList}/>
 
 </div>
 </div>
@@ -35,27 +32,27 @@ return(
 
 const pokemonList = [
   {
-      name: "bulbasaur",
+      name: "Bulbasaur",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     },
     {
-      name: "charmander",
+      name: "Charmander",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
     },
     {
-      name: "squirtle",
+      name: "Squirtle",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     },
     {
-      name: "pikachu",
+      name: "Pikachu",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     },
     {
-      name: "mew",
+      name: "Mew",
     },
   ];
 
