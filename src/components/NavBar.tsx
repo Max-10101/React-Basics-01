@@ -10,13 +10,13 @@ interface NavBarProps {
 }
 
 function NavBar({ setPokemonIndex, pokemonList}: NavBarProps) {
- const handleClcik = (index: number) => {setPokemonIndex(index)}
+ const handleClik = (index: number) => {setPokemonIndex(index)}
   return (
       <div>
  
  {pokemonList.map((pokemon,index)=>
  
- (<button key={index} type="button" onClick={ () => handleClcik(index)}> 
+ (<button key={index} type="button" onClick={ () => handleClik(index)}> 
     {pokemon.name}
     
     
