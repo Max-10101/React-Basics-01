@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   
-  const [pokemonIndex, setPokemonIndex]= useState(0)
+  const [pokemonIndex, setPokemonIndex]= useState (0)
   
 return(
  
@@ -16,7 +16,7 @@ return(
 <PokemonCard pokemon ={pokemonList[pokemonIndex]}/>
 <div>
 
-<NavBar  pokemonIndex={pokemonIndex}
+<NavBar  pokemonIndex={pokemonIndex }
          setPokemonIndex={setPokemonIndex}
          pokemonList={pokemonList}/>
 
